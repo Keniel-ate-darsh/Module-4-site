@@ -14,14 +14,13 @@
     // Create function, happyBirthday, that outputs "Happy Birthday to you!" using the innerHTML property
 	// Look at the code from last week's assignment if you're unsure of how to use innerHTML
 	function happyBirthday() {
-	document.getElementById("output").innerHTML += "Happy Birthday to you!</br>";
+	document.getElementById("output").innerHTML += "Happy Birthday to you!<br>";
 	}
 
     // Create function, birthdayName
 	// and outputs a personalized "Happy Birthday dear, <name>!" using the innerHTML property"
 	function birthdayName(name) {
-		document.getElementById("output").innerHTML = "Happy Birthday dear" + name + ",</br>";
-			
+		document.getElementById("output").innerHTML += "Happy Birthday dear, " + name + "!<br>";
 	}
 
 	// Create function, personalizedSong, that receives two arguments, age and name.
@@ -35,7 +34,7 @@
 	// Call the birthdayName function, using the actual name received form the user
 	// Call the happyBirthday function
 	function personalizedSong(age,name) {
-		document.getElementById("output").innerHTML += "You're" + age + " years old today!</br>";
+		document.getElementById("output").innerHTML += "You're " + age + " years old today!<br>";
 		happyBirthday();
 		happyBirthday();
 		birthdayName(name);
@@ -51,7 +50,7 @@
 	// Hint: You can clear out output's innterHTML by 
 	// setting its content to empty quotations, .innerHTML = "";
 	
-	document.getElementById("myButton").addEventListner("click",function() {
+	document.getElementById("myButton").addEventListener("click",function() {
 		document.getElementById("output").innerHTML = "";
 		var name = document.getElementById("nameInput").value;
 		var age = document.getElementById("ageInput").value;
